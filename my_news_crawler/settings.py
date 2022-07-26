@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-!p!c-q0)_$xm01--#(mn%g!_#^%wjr4_f6mx=ph9i!^ty23y8t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'main'
 ]
 
 MIDDLEWARE = [
@@ -103,13 +104,17 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+# 한글 표기
+LANGUAGE_CODE = 'ko-kr'
 
-TIME_ZONE = 'UTC'
+# 대한민국 시간대
+TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
 
-USE_TZ = True
+
+# 기본 시간대 사용 여부
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
