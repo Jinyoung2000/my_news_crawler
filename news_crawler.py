@@ -19,8 +19,6 @@ def fetch_google_news_data():
     # tag, attribues
     list_items = soup.find_all('div', 'NiLAwe')
 
-    print(list_items)
-
     for item in list_items:
         # title
         title = item.find('a', 'DY5T1d RZIKme').text
